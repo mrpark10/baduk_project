@@ -159,7 +159,6 @@ footer {
     transition: all 0.4s ease;
     color:var(--color-point);
 }
-
 .main-nav p::after {
     content: "";
     display: block;
