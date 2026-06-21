@@ -68,7 +68,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* 네가 만든 하단 밑줄 효과 */
+/* 하단 밑줄 효과 */
 .main-nav a::after {
     content: "";
     display: block;
