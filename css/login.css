@@ -1,4 +1,4 @@
-/* 기본 리셋 */
+/* 기본 설정 */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 상단 헤더 & 네비게이션 기본 디자인 */
+/* 헤더 */
 .site-header {
     text-align: center;
     padding: 30px 0;
@@ -19,6 +19,7 @@ body {
     border-bottom: 1px solid #EAEAEA;
 }
 
+/* 메뉴 */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -34,14 +35,15 @@ body {
     font-size: 14px;
 }
 
+/* 메뉴 효과 */
 .main-nav a:hover {
     color: #D2B48C;
 }
 
-/* [핵심] 로그인 박스 기본 중앙 정렬 디자인 */
+/* 로그인 박스 */
 .login-container {
     width: 360px;
-    margin: 60px auto; /* 위아래 여백 주고 화면 가운데로 배치 */
+    margin: 60px auto; /* 가운데 정렬 */
     background-color: #FFFFFF;
     padding: 30px;
     border: 1px solid #CCCCCC;
@@ -54,7 +56,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* 입력칸 묶음 */
+/* 입력 영역 */
 .input-wrap {
     margin-bottom: 15px;
 }
@@ -66,7 +68,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* 인풋창 테두리 버그 안 나게 정석대로 세팅 */
+/* 입력창 */
 .input-wrap input {
     width: 100%;
     padding: 10px;
@@ -76,8 +78,9 @@ body {
     outline: none;
 }
 
+/* 입력창 선택 */
 .input-wrap input:focus {
-    border-color: #D2B48C; /* 클릭하면 갈색 선 */
+    border-color: #D2B48C; /* 포커스 색상 */
 }
 
 /* 로그인 버튼 */
@@ -94,11 +97,12 @@ body {
     margin-top: 10px;
 }
 
+/* 버튼 효과 */
 .login-btn:hover {
     background-color: #D2B48C;
 }
 
-/* 하단 링크 */
+/* 링크 */
 .login-links {
     text-align: center;
     margin-top: 20px;
@@ -115,7 +119,7 @@ body {
     margin: 0 10px;
 }
 
-/* 하단 푸터 */
+/* 푸터 */
 .site-footer {
     text-align: center;
     margin-top: 50px;
