@@ -1,0 +1,110 @@
+/* 로그인 */
+
+.login-container{
+    padding:60px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* 박스 */
+.login-box{
+    width:100%;
+    max-width:400px;
+    padding:40px;
+    text-align:center;
+    background:var(--color-white);
+    border:1px solid #EAEAEA;
+    border-radius:12px;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+/* 제목 */
+.login-box h2{
+    margin-bottom:8px;
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--color-main);
+}
+
+/* 설명 */
+.login-subtitle{
+    margin-bottom:30px;
+    font-size:.9rem;
+    color:#777;
+}
+
+/* 폼 */
+.login-form{
+    text-align:left;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-size:.9rem;
+    font-weight:500;
+    color:var(--color-main);
+}
+
+/* 입력창 */
+.input-group input{
+    width:100%;
+    padding:12px;
+    background:#FAFAFA;
+    border:1px solid #CCC;
+    border-radius:6px;
+    outline:none;
+    font-size:.95rem;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    background:#fff;
+    border-color:var(--color-point);
+    box-shadow:0 0 0 3px rgba(210,180,140,.2);
+}
+
+/* 버튼 */
+.login-btn{
+    width:100%;
+    margin-top:10px;
+    padding:14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    color:#fff;
+    background:var(--color-main);
+    font-size:1rem;
+    font-weight:600;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:var(--color-point);
+}
+
+/* 하단 */
+.login-footer{
+    margin-top:25px;
+    font-size:.85rem;
+}
+
+.login-footer a{
+    color:#777;
+    text-decoration:none;
+    transition:color .2s;
+}
+
+.login-footer a:hover{
+    color:var(--color-point);
+}
+
+.login-footer .divider{
+    margin:0 8px;
+    color:#EAEAEA;
+}
