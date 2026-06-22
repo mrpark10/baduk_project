@@ -1,65 +1,108 @@
-/* 로그인 박스 전체 설정 */
-.login-box {
-    width: 350px;
-    margin: 80px auto; /* 위아래 여백 주고 화면 가운데로 정렬 */
-    padding: 30px;
-    background-color: var(--color-white);
-    border: 1px solid #DDDDDD;
-    border-radius: 5px;
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF9F6;
+    color: #2F2F2F;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 상단 헤더 & 네비게이션 기본 디자인 */
+.site-header {
     text-align: center;
+    padding: 30px 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EAEAEA;
 }
 
-.login-box h2 {
-    font-size: 22px;
-    margin-bottom: 30px;
-    color: var(--color-main);
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-top: 15px;
 }
 
-/* 입력창 칸 하나씩 여백 주기 */
-.input-item {
-    text-align: left;
+.main-nav a {
+    text-decoration: none;
+    color: #2F2F2F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main-nav a:hover {
+    color: #D2B48C;
+}
+
+/* [핵심] 로그인 박스 기본 중앙 정렬 디자인 */
+.login-container {
+    width: 360px;
+    margin: 60px auto; /* 위아래 여백 주고 화면 가운데로 배치 */
+    background-color: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+}
+
+.login-container h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 입력칸 묶음 */
+.input-wrap {
     margin-bottom: 15px;
 }
 
-/* 아이디, 비밀번호 글씨 */
-.input-item p {
-    font-size: 14px;
+.input-wrap label {
+    display: block;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: var(--color-main);
 }
 
-/* 실제 입력하는 창 */
-.input-item input {
+/* 인풋창 테두리 버그 안 나게 정석대로 세팅 */
+.input-wrap input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
+    outline: none;
+}
+
+.input-wrap input:focus {
+    border-color: #D2B48C; /* 클릭하면 갈색 선 */
 }
 
 /* 로그인 버튼 */
-.login-submit {
+.login-btn {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: var(--color-main);
-    color: var(--color-white);
+    padding: 12px;
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
     border: none;
     border-radius: 4px;
-    font-size: 15px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-/* 로그인 버튼 마우스 올렸을 때 색상 변경 */
-.login-submit:hover {
-    background-color: var(--color-point);
+.login-btn:hover {
+    background-color: #D2B48C;
 }
 
-/* 하단 링크 스타일 */
+/* 하단 링크 */
 .login-links {
+    text-align: center;
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .login-links a {
@@ -67,11 +110,15 @@
     text-decoration: none;
 }
 
-.login-links a:hover {
-    color: var(--color-point);
-}
-
 .login-links span {
     color: #EAEAEA;
     margin: 0 10px;
+}
+
+/* 하단 푸터 */
+.site-footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 12px;
+    color: #888888;
 }

@@ -3,51 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>대기사 : 로그인</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <h1>대기사(大棋士) : 시대를 지배한 거장들</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="screen1.html">돌부처(이창호)</a></li>
-                    <li><a href="screen2.html">날쎈바둑(이세돌)</a></li>
-                    <li><a href="screen3.html">비운의 천재(박정환)</a></li>
-                    <li><a href="screen4.html">전무후무의 기재(신진서)</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="login-box">
-            <h2>로그인</h2>
-            
-            <form>
-                <div class="input-item">
-                    <p>아이디</p>
-                    <input type="text" name="id" placeholder="아이디를 입력하세요">
-                </div>
-                
-                <div class="input-item">
-                    <p>비밀번호</p>
-                    <input type="password" name="pw" placeholder="비밀번호를 입력하세요">
-                </div>
+    <header class="site-header">
+        <h1>대기사(大棋士) : 시대를 지배한 거장들</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="screen1.html">돌부처(이창호)</a></li>
+                <li><a href="screen2.html">날쎈바둑(이세돌)</a></li>
+                <li><a href="screen3.html">비운의 천재(박정환)</a></li>
+                <li><a href="screen4.html">전무후무의 기재(신진서)</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <button type="button" class="login-submit" onclick="alert('로그인 기능 준비 중!')">로그인하기</button>
-            </form>
-
-            <div class="login-links">
-                <a href="#none">회원가입</a>
-                <span>|</span>
-                <a href="#none">비밀번호 찾기</a>
+    <div class="login-container">
+        <h2>사용자 로그인</h2>
+        
+        <form>
+            <div class="input-wrap">
+                <label>아이디</label>
+                <input type="text" name="id" placeholder="ID 입력">
             </div>
-        </div>
+            
+            <div class="input-wrap">
+                <label>비밀번호</label>
+                <input type="password" name="pw" placeholder="PASSWORD 입력">
+            </div>
 
-        <footer>
-            <p>&copy; 2026 대기사(大棋士) 프로젝트. All Rights Reserved.</p>
-        </footer>
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+
+        <div class="login-links">
+            <a href="#none">회원가입</a>
+            <span>|</span>
+            <a href="#none">비밀번호 찾기</a>
+        </div>
     </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 대기사(大棋士) 프로젝트. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
