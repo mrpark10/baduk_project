@@ -1,277 +1,113 @@
-/* ===========================
-   공통 스타일
-=========================== */
-
-:root {
-    --color-bg: #FAF9F6;
-    --color-main: #2F2F2F;
-    --color-point: #D2B48C;
-    --color-white: #FFFFFF;
-    --font-sans: 'Noto Sans KR', sans-serif;
-}
-
+/* 1. 기본 세팅 */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-main);
-    font-family: var(--font-sans);
+    background-color: #FAF9F6; /* 연한 아이보리 배경색 */
+    color: #2F2F2F;            /* 진한 회색 글자색 */
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 컨테이너 */
-.container,
-main.introduce {
+/* 2. 레이아웃 (가운데 정렬) */
+.container, main.introduce {
     max-width: 1000px;
     margin: 50px auto;
-    padding: 0 30px; /* 좌우 여백 */
+    padding: 0 30px;
 }
 
-/* 헤더 */
+/* 3. 상단 헤더와 메뉴 */
 .site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 0 30px 0;
+    text-align: center;
+    padding: 40px 0;
     border-bottom: 1px solid #EAEAEA;
-    background-color: var(--color-white); /* 헤더 배경 */
+    background-color: #FFFFFF;
 }
 
-/* 사이트 제목 */
-.site-header h1 {
-    font-weight: 700;
-    color: var(--color-main);
-    letter-spacing: -0.05em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* 메뉴 */
 .main-nav ul {
     display: flex;
     justify-content: center;
     gap: 25px;
     list-style: none;
-    padding: 0;
+    margin-top: 20px;
 }
 
-/* 메뉴 링크 */
 .main-nav a {
     text-decoration: none;
-    color: var(--color-main);
-    font-weight: 500;
+    color: #2F2F2F;
+    font-weight: bold;
     padding: 8px 12px;
-    transition: all 0.3s;
-    display: inline-block;
 }
 
-/* 메뉴에 마우스를 올렸을 때 */
-.main-nav a:hover,
-.main-nav a:focus {
-    color: var(--color-point);
-    transform: translateY(-3px);
-}
-
-/* 메뉴 밑줄 */
-.main-nav a::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-point);
-    margin-top: 4px;
-    transform: scaleX(0); /* 기본 상태 */
-    transition: transform 0.3s ease;
-}
-
-/* 메뉴 밑줄 표시 */
-.main-nav a:hover::after {
-    transform: scaleX(1);
-}
-
-/* 현재 페이지 메뉴 */
+/* 메뉴 마우스 올렸을 때 갈색으로 변경 */
+.main-nav a:hover, 
 .main-nav a[href="screen3.html"] {
-    color: var(--color-point);
-    font-weight: 700;
+    color: #D2B48C; 
 }
 
-.main-nav a[href="screen4.html"]::after {
-    transform: scaleX(1);
-}
-
-/* 카드 영역 */
+/* 4. 본문 카드 상자 */
 .intro-section {
-    background: linear-gradient(to bottom, var(--color-white), var(--color-bg));
-    padding: 50px 40px;
+    background-color: #FFFFFF;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s ease;
-    background-size: 200% 100%;
+    border: 1px solid #EAEAEA;
     margin-top: 30px;
 }
 
-/* 카드 호버 효과 */
-.intro-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    background-position: right center;
-}
-
-
-/* ===========================
-   소개 페이지
-=========================== */
-
-/* 내용 정렬 */
-.introduce .intro-section {
-    display: block;
-    text-align: left;
-}
-
-/* 제목 */
-.intro-section h1 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 35px;
-    color: var(--color-main);
-}
-
-/* 프로필 */
+/* 5. 프로필 영역 (이미지 + 글씨 가로 배치) */
 .profile-box {
     display: flex;
     align-items: center;
     gap: 35px;
-    margin-bottom: 35px;
     padding-bottom: 30px;
-    border-bottom: 1px dashed #EAEAEA; /* 구분선 */
+    border-bottom: 1px dashed #EAEAEA;
 }
 
-/* 프로필 이미지 */
 .profile-box img {
     width: 150px;
-    height: auto;
     border-radius: 8px;
-    border: 1px solid var(--color-point);
+    border: 1px solid #D2B48C;
     padding: 5px;
-    background-color: var(--color-white);
-    transition: all 0.3s ease;
-    filter: grayscale(60%); /* 흑백 효과 */
-    animation: floatBall 3s ease-in-out infinite; /* 위아래 움직임 */
 }
 
-/* 이미지 효과 */
-.intro-section:hover .profile-box img {
-    filter: grayscale(0%);
-}
-
-/* 이름 */
-.profile-text h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* 프로필 정보 */
 .profile-text p {
     font-size: 15px;
     margin-bottom: 6px;
-    color: var(--color-main);
-
-    /* 줄바꿈 유지 */
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
 }
 
-/* 강조 텍스트 */
-.profile-text strong {
-    font-weight: 600;
-    margin-right: 4px;
+/* 6. 경력 및 본문 스토리 */
+.career-box h3, .story-content h3 {
+    margin: 30px 0 15px 0;
 }
 
-/* 소제목 */
-.career-box h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 35px 0 15px 0;
-    color: var(--color-main);
-}
-
-/* 목록 */
 .career-box ul {
     padding-left: 20px;
-    margin-bottom: 30px;
 }
 
-/* 목록 내용 */
-.career-box li {
+.career-box li, .story-content p {
     font-size: 15px;
+    color: #444444;
     margin-bottom: 10px;
-    color: #444444;
+    line-height: 1.6;
 }
 
-/* 본문 */
-.story-content p {
-    font-size: 15px;
-    color: #444444;
-    margin-bottom: 15px;
-    line-height: 1.7;
-}
-
-/* 인용문 */
+/* 강조하는 인용구 상자 */
 .story-quote {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-main);
-    margin: 30px 0;
-    padding: 15px 20px;
-    border-left: 3px solid var(--color-point); /* 왼쪽 강조선 */
-    background-color: rgba(210, 180, 140, 0.05); /* 배경 강조 */
-    font-style: normal;
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid #D2B48C;
+    background-color: #FAF9F6;
+    font-weight: bold;
 }
 
-
-/* ===========================
-   애니메이션
-=========================== */
-
-@keyframes floatBall {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-/* ===========================
-   반응형
-=========================== */
-
+/* 7. 모바일 화면용 반응형 (화면 작아지면 세로로 정렬) */
 @media (max-width: 768px) {
-
-    .container,
-    main.introduce {
-        padding: 0 15px;
-        margin: 20px auto;
-    }
-
-    .intro-section {
-        padding: 30px 20px;
-    }
-
-    .profile-box {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+    .container, main.introduce { padding: 0 15px; }
+    .intro-section { padding: 20px; }
+    .profile-box { 
+        flex-direction: column; /* 가로에서 세로 배치로 변경 */
+        text-align: center; 
     }
 }
