@@ -44,6 +44,7 @@ body {
 
 /* 현재 메뉴와 호버 */
 .main-nav a:hover,
+.main-nav a:focus-visible,
 .main-nav a[href="screen3.html"] {
     color: #D2B48C;
 }
