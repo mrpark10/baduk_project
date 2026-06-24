@@ -36,7 +36,8 @@ body {
 }
 
 /* 메뉴 효과 */
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a:focus-visible {
     color: #D2B48C;
 }
 
@@ -99,7 +100,8 @@ body {
 }
 
 /* 버튼 효과 */
-.login-btn:hover {
+.login-btn:hover,
+.login-btn:focus-visible {
     background-color: #D2B48C;
 }
 
@@ -113,6 +115,10 @@ body {
 .login-links a {
     color: #666666;
     text-decoration: none;
+}
+
+.login-links a:focus-visible {
+    color: #D2B48C;
 }
 
 .login-links span {
