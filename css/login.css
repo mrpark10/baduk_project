@@ -43,6 +43,7 @@ body {
 /* 로그인 박스 */
 .login-container {
     width: 360px;
+    max-width: calc(100% - 30px);
     margin: 60px auto; /* 가운데 정렬 */
     background-color: #FFFFFF;
     padding: 30px;
