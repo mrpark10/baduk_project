@@ -9,7 +9,7 @@ body {
     color: #2F2F2F; /* 글자색 */
     font-family: 'Noto Sans KR', sans-serif;
 }
- 
+  
 /* 레이아웃 */
 .container, main.introduce {
     max-width: 1000px;
